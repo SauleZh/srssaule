@@ -26,18 +26,20 @@
 </style>
 <div class="container">
     <div class="row">
-        <a th:href = "@{/kafedra/add}" class="btn btn-primary btn-lg" role="button">add</a>
+        <a th:href = "@{/kafe/add}" class="btn btn-primary btn-lg" role="button">add</a>
         <br/>
         <table class="table">
             <tr>
-                <th>Kafedra Name</th>
-                <th>years</th>
+                <th>Kafa Name</th>
+                <th>Kala Name</th>
+                <th>Nomer</th>
             </tr>
-            <tr th:each = "kafedra : ${kafedras}">
-                <td th:text = "${kafedra.KafedraName}">test</td>
-                <td th:text = "${kafedra.year}">test</td>
-                <td> <a th:href = "@{'/kafedra/deleteContact?id='+${kafedra.id}}">delete</a></td>
-                <td> <a th:href = "@{'/kafedra/update?id='+${kafedra.id}}">update</a></td>
+            <tr th:each = "kafe : ${kafes}">
+                <td th:text = "${kafe.kafeName}">test</td>
+                <td th:text = "${kafe.kalaName}">test</td>
+                <td th:text = "${kafe.nomer}">test</td>
+                <td> <a th:href = "@{'/kafe/deleteContact?id='+${kafe.id}}">delete</a></td>
+                <td> <a th:href = "@{'/kafe/update?id='+${kafe.id}}">update</a></td>
 
             </tr>
         </table>

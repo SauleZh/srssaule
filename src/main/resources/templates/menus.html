@@ -26,20 +26,18 @@
 </style>
 <div class="container">
     <div class="row">
-        <a th:href = "@{/teacher/add}" class="btn btn-primary btn-lg" role="button">add</a>
+        <a th:href = "@{/menu/add}" class="btn btn-primary btn-lg" role="button">add</a>
         <br/>
         <table class="table">
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>email</th>
+                <th>Kafedra Name</th>
+                <th>Price</th>
             </tr>
-            <tr th:each = "teacher : ${teachers}">
-                <td th:text = "${teacher.firstName}">test</td>
-                <td th:text = "${teacher.lastName}">test</td>
-                <td th:text = "${teacher.email}">test</td>
-                <td> <a th:href = "@{'/teacher/deleteContact?id='+${teacher.id}}">delete</a></td>
-                <td> <a th:href = "@{'/teacher/update?id='+${teacher.id}}">update</a></td>
+            <tr th:each = "menu : ${menus}">
+                <td th:text = "${menu.MenuName}">test</td>
+                <td th:text = "${menu.price}">test</td>
+                <td> <a th:href = "@{'/menu/deleteContact?id='+${menu.id}}">delete</a></td>
+                <td> <a th:href = "@{'/menu/update?id='+${menu.id}}">update</a></td>
 
             </tr>
         </table>

@@ -4,9 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 @Entity
-public class Teacher {
+public class Sponsor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id ;
@@ -14,9 +13,9 @@ public class Teacher {
     private String lastName ;
     private String email ;
 
-    public Teacher(){}
+    public Sponsor(){}
 
-    public Teacher(String firstName, String lastName, String email) {
+    public Sponsor(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -54,4 +53,3 @@ public class Teacher {
         this.email = email;
     }
 }
-
