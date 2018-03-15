@@ -26,20 +26,20 @@
 </style>
 <div class="container">
     <div class="row">
-        <a th:href = "@{/sponsor/add}" class="btn btn-primary btn-lg" role="button">add</a>
+        <a th:href = "@{/restoran/add}" class="btn btn-primary btn-lg" role="button">add</a>
         <br/>
         <table class="table">
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>email</th>
+                <th>Restoran Name</th>
+                <th>Kala Name</th>
+                <th>Nomer</th>
             </tr>
-            <tr th:each = "sponsor : ${sponsors}">
-                <td th:text = "${sponsor.firstName}">test</td>
-                <td th:text = "${sponsor.lastName}">test</td>
-                <td th:text = "${sponsor.email}">test</td>
-                <td> <a th:href = "@{'/sponsor/deleteContact?id='+${sponsor.id}}">delete</a></td>
-                <td> <a th:href = "@{'/sponsor/update?id='+${sponsor.id}}">update</a></td>
+            <tr th:each = "restoran : ${restorans}">
+                <td th:text = "${restoran.RestoranName}">test</td>
+                <td th:text = "${restoran.kalaName}">test</td>
+                <td th:text = "${restoran.nomer}">test</td>
+                <td> <a th:href = "@{'/restoran/deleteContact?id='+${restoran.id}}">delete</a></td>
+                <td> <a th:href = "@{'/restoran/update?id='+${restoran.id}}">update</a></td>
 
             </tr>
         </table>

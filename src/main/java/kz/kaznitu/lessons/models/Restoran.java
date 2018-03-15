@@ -5,18 +5,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 @Entity
-public class Kafe {
+public class Restoran {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id ;
-    private String kafeName ;
+    private String RestoranName ;
     private String kalaName ;
     private int nomer ;
 
-    public Kafe(){}
+    public Restoran(){}
 
-    public Kafe(String kafeName, String kalaName, int nomer) {
-        this.kafeName = kafeName;
+    public Restoran(String RestoranName, String kalaName, int nomer) {
+        this.RestoranName = RestoranName;
         this.kalaName=kalaName;
         this.nomer = nomer;
     }
@@ -29,12 +29,11 @@ public class Kafe {
         this.id = id;
     }
 
-    public String getKafeName() {
-        return kafeName;
+    public String getRestoranName() {
+        return RestoranName;
     }
 
-    public void setKafeName(String kafeName) {
-        this.kafeName = kafeName;
+    public void setRestoranName(String RestoranName) { this.RestoranName = RestoranName;
     }
 
     public String getKalaName() {

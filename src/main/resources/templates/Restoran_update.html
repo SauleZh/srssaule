@@ -10,9 +10,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group">
-            <form action="#" th:action="@{/kafe/adds}" th:object = "${kafee}" method="POST">
-                <label for="kafename">Kafe Name</label>
-                <input type="text" id="kafename" name="kafename" th:field = "*{kafeName}" class="form-control" placeholder="Есімін енгіз" value="${teacher.firstName}" />
+            <form action="#" th:action="@{/restoran/adds}" th:object = "${kafee}" method="POST">
+                <label for="restoranname">Restoran Name</label>
+                <input type="text" id="restoranname" name="restoranname" th:field = "*{restoranName}" class="form-control" placeholder="Есімін енгіз" value="${teacher.firstName}" />
 
                 <label for="kalaname">Kala Name</label>
                 <input type="text" id="kalaname" name="kalaname" th:field = "*{kalaName}" class="form-control" placeholder="Тегін енгіз" value="${teacher.lastName}" />
